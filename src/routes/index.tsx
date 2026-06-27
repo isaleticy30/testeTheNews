@@ -9,22 +9,22 @@ import oilImg from "@/assets/oil-refinery.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "the news â€” EdiÃ§Ã£o de hoje" },
-      { name: "description", content: "Sua dose diÃ¡ria de notÃ­cias selecionadas, em um sÃ³ lugar." },
-      { property: "og:title", content: "the news â€” EdiÃ§Ã£o de hoje" },
-      { property: "og:description", content: "Sua dose diÃ¡ria de notÃ­cias selecionadas, em um sÃ³ lugar." },
+      { title: "the news — Edição de hoje" },
+      { name: "description", content: "Sua dose diária de notícias selecionadas, em um só lugar." },
+      { property: "og:title", content: "the news — Edição de hoje" },
+      { property: "og:description", content: "Sua dose diária de notícias selecionadas, em um só lugar." },
     ],
   }),
   component: Index,
 });
 
-const categories = ["Para vocÃª", "Mundo", "Brasil", "Tecno", "Money", "Sports"];
+const categories = ["Para você", "Mundo", "Brasil", "Tecno", "Money", "Sports"];
 
 const stories = [
   {
     source: "CNBC",
     time: "3min",
-    title: "Tesouro dos EUA autoriza vendas de petrÃ³leo iraniano sob nova licenÃ§a especial",
+    title: "Tesouro dos EUA autoriza vendas de petróleo iraniano sob nova licença especial",
     img: oilImg,
     tag: "Mundo",
     accent: "bg-terracotta text-cream",
@@ -32,7 +32,7 @@ const stories = [
   {
     source: "G1",
     time: "12min",
-    title: "Contrato de R$ 1 bi marca inÃ­cio do maior projeto de infraestrutura do ano",
+    title: "Contrato de R$ 1 bi marca início do maior projeto de infraestrutura do ano",
     img: contractImg,
     tag: "Brasil",
     accent: "bg-sage text-plum",
@@ -42,13 +42,13 @@ const stories = [
     time: "18min",
     title: "Mais da metade das canetas emagrecedoras vem do mercado paralelo",
     img: pharmaImg,
-    tag: "SaÃºde",
+    tag: "Saúde",
     accent: "bg-blush text-plum",
   },
   {
     source: "O Globo",
     time: "28min",
-    title: "SatÃ©lites revelam antes e depois da Ã¡rea mais devastada do paÃ­s em 2026",
+    title: "Satélites revelam antes e depois da área mais devastada do país em 2026",
     img: satImg,
     tag: "Clima",
     accent: "bg-plum text-cream",
@@ -71,7 +71,7 @@ function Index() {
           </span>
           <div className="leading-tight">
             <p className="font-display text-lg italic">the news</p>
-            <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 Â· qui</p>
+            <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 · qui</p>
           </div>
         </div>
         <button
@@ -94,7 +94,7 @@ function Index() {
           </h1>
           <div className="mt-5 flex items-center gap-3 text-[11px] text-dim">
             <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">5 min</span>
-            <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">12 histÃ³rias</span>
+            <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">12 histórias</span>
             <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">25 jun</span>
           </div>
         </section>
@@ -133,12 +133,12 @@ function Index() {
               <Bookmark className="size-4" strokeWidth={2} />
             </button>
             <span className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-terracotta px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider">
-              Capa Â· {hero.tag}
+              Capa · {hero.tag}
             </span>
 
             <div className="absolute inset-x-0 bottom-0 p-6">
               <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-cream/65">
-                {hero.source} Â· {hero.time} de leitura
+                {hero.source} · {hero.time} de leitura
               </p>
               <h2 className="mt-2 text-balance font-display text-[26px] font-light leading-[1.1]">
                 {hero.title}
@@ -196,7 +196,7 @@ function Index() {
                       {s.tag}
                     </span>
                     <span className="font-sans text-[10px] text-dim">
-                      {s.source} Â· {s.time}
+                      {s.source} · {s.time}
                     </span>
                   </div>
                   <h4 className="mt-1.5 line-clamp-3 text-balance font-display text-[16px] font-normal leading-snug">
@@ -225,7 +225,7 @@ function Index() {
               Acervo
             </p>
             <p className="mt-1 font-display text-xl font-light leading-tight">
-              1.396 ediÃ§Ãµes <em className="italic text-blush">para reler</em>
+              1.396 edições <em className="italic text-blush">para reler</em>
             </p>
           </div>
           <span className="grid size-12 shrink-0 place-items-center rounded-full bg-terracotta">
@@ -234,7 +234,7 @@ function Index() {
         </Link>
 
         <p className="mt-8 px-6 text-center font-display text-sm italic text-dim">
-          â€” atÃ© amanhÃ£, com cafÃ© â€”
+          — até amanhã, com café —
         </p>
       </main>
 
