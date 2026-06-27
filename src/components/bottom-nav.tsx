@@ -10,6 +10,7 @@ const items = [
 ] as const;
 
 export function BottomNav() {
+  // Mantem a navegacao principal fixa no rodape e destaca a rota atual.
   const path = useRouterState({ select: (s) => s.location.pathname });
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-4 pb-5">

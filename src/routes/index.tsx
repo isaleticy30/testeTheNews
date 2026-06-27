@@ -9,22 +9,22 @@ import oilImg from "@/assets/oil-refinery.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "the news — Edição de hoje" },
-      { name: "description", content: "Sua dose diária de notícias selecionadas, em um só lugar." },
-      { property: "og:title", content: "the news — Edição de hoje" },
-      { property: "og:description", content: "Sua dose diária de notícias selecionadas, em um só lugar." },
+      { title: "the news â€” EdiÃ§Ã£o de hoje" },
+      { name: "description", content: "Sua dose diÃ¡ria de notÃ­cias selecionadas, em um sÃ³ lugar." },
+      { property: "og:title", content: "the news â€” EdiÃ§Ã£o de hoje" },
+      { property: "og:description", content: "Sua dose diÃ¡ria de notÃ­cias selecionadas, em um sÃ³ lugar." },
     ],
   }),
   component: Index,
 });
 
-const categories = ["Para você", "Mundo", "Brasil", "Tecno", "Money", "Sports"];
+const categories = ["Para vocÃª", "Mundo", "Brasil", "Tecno", "Money", "Sports"];
 
 const stories = [
   {
     source: "CNBC",
     time: "3min",
-    title: "Tesouro dos EUA autoriza vendas de petróleo iraniano sob nova licença especial",
+    title: "Tesouro dos EUA autoriza vendas de petrÃ³leo iraniano sob nova licenÃ§a especial",
     img: oilImg,
     tag: "Mundo",
     accent: "bg-terracotta text-cream",
@@ -32,7 +32,7 @@ const stories = [
   {
     source: "G1",
     time: "12min",
-    title: "Contrato de R$ 1 bi marca início do maior projeto de infraestrutura do ano",
+    title: "Contrato de R$ 1 bi marca inÃ­cio do maior projeto de infraestrutura do ano",
     img: contractImg,
     tag: "Brasil",
     accent: "bg-sage text-plum",
@@ -42,13 +42,13 @@ const stories = [
     time: "18min",
     title: "Mais da metade das canetas emagrecedoras vem do mercado paralelo",
     img: pharmaImg,
-    tag: "Saúde",
+    tag: "SaÃºde",
     accent: "bg-blush text-plum",
   },
   {
     source: "O Globo",
     time: "28min",
-    title: "Satélites revelam antes e depois da área mais devastada do país em 2026",
+    title: "SatÃ©lites revelam antes e depois da Ã¡rea mais devastada do paÃ­s em 2026",
     img: satImg,
     tag: "Clima",
     accent: "bg-plum text-cream",
@@ -56,10 +56,11 @@ const stories = [
 ];
 
 function Index() {
+  // Monta a capa editorial da home com a noticia principal e a lista secundaria.
   const [hero, ...rest] = stories;
   return (
     <div className="relative mx-auto min-h-screen max-w-[430px] overflow-hidden bg-cream text-plum">
-      {/* Floating blobs */}
+      {/* Formas decorativas de fundo */}
       <div className="pointer-events-none absolute -left-24 top-40 size-72 rounded-full bg-blush/60 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 top-[520px] size-64 rounded-full bg-sage/40 blur-3xl" />
 
@@ -70,7 +71,7 @@ function Index() {
           </span>
           <div className="leading-tight">
             <p className="font-display text-lg italic">the news</p>
-            <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 · qui</p>
+            <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 Â· qui</p>
           </div>
         </div>
         <button
@@ -82,7 +83,7 @@ function Index() {
       </header>
 
       <main className="relative z-10 pb-32">
-        {/* Editorial title */}
+        {/* Bloco principal de abertura editorial */}
         <section className="px-6 pt-8">
           <p className="font-sans text-[11px] uppercase tracking-[0.22em] text-terracotta">
             Bom dia, Lara
@@ -93,12 +94,12 @@ function Index() {
           </h1>
           <div className="mt-5 flex items-center gap-3 text-[11px] text-dim">
             <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">5 min</span>
-            <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">12 histórias</span>
+            <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">12 histÃ³rias</span>
             <span className="rounded-full bg-plum/5 px-3 py-1.5 font-medium">25 jun</span>
           </div>
         </section>
 
-        {/* Category pills */}
+        {/* Filtros visuais de categoria */}
         <div className="mt-7 flex gap-2 overflow-x-auto px-6 pb-2 no-scrollbar">
           {categories.map((cat, i) => (
             <button
@@ -114,7 +115,7 @@ function Index() {
           ))}
         </div>
 
-        {/* Hero card – organic, asymmetric */}
+        {/* Card principal com destaque assimetrico */}
         <section className="mt-5 px-6">
           <article className="relative overflow-hidden rounded-[36px] bg-plum text-cream shadow-[0_30px_60px_-30px_rgba(60,30,80,0.55)]">
             <img
@@ -132,12 +133,12 @@ function Index() {
               <Bookmark className="size-4" strokeWidth={2} />
             </button>
             <span className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-terracotta px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider">
-              Capa · {hero.tag}
+              Capa Â· {hero.tag}
             </span>
 
             <div className="absolute inset-x-0 bottom-0 p-6">
               <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-cream/65">
-                {hero.source} · {hero.time} de leitura
+                {hero.source} Â· {hero.time} de leitura
               </p>
               <h2 className="mt-2 text-balance font-display text-[26px] font-light leading-[1.1]">
                 {hero.title}
@@ -159,7 +160,7 @@ function Index() {
           </article>
         </section>
 
-        {/* Section header */}
+        {/* Cabecalho da lista secundaria */}
         <div className="mt-10 flex items-end justify-between px-6">
           <h3 className="font-display text-2xl font-light">
             Mais <em className="italic text-terracotta">lidas</em> hoje
@@ -172,7 +173,7 @@ function Index() {
           </Link>
         </div>
 
-        {/* Soft list cards */}
+        {/* Lista de noticias complementares */}
         <ul className="mt-5 space-y-3 px-6">
           {rest.map((s, i) => (
             <li key={i}>
@@ -195,7 +196,7 @@ function Index() {
                       {s.tag}
                     </span>
                     <span className="font-sans text-[10px] text-dim">
-                      {s.source} · {s.time}
+                      {s.source} Â· {s.time}
                     </span>
                   </div>
                   <h4 className="mt-1.5 line-clamp-3 text-balance font-display text-[16px] font-normal leading-snug">
@@ -214,7 +215,7 @@ function Index() {
           ))}
         </ul>
 
-        {/* Acervo CTA – organic shape */}
+        {/* Chamada para o acervo */}
         <Link
           to="/acervo"
           className="mx-6 mt-8 flex items-center justify-between rounded-[32px] bg-gradient-to-br from-plum to-plum/85 p-5 text-cream"
@@ -224,7 +225,7 @@ function Index() {
               Acervo
             </p>
             <p className="mt-1 font-display text-xl font-light leading-tight">
-              1.396 edições <em className="italic text-blush">para reler</em>
+              1.396 ediÃ§Ãµes <em className="italic text-blush">para reler</em>
             </p>
           </div>
           <span className="grid size-12 shrink-0 place-items-center rounded-full bg-terracotta">
@@ -233,7 +234,7 @@ function Index() {
         </Link>
 
         <p className="mt-8 px-6 text-center font-display text-sm italic text-dim">
-          — até amanhã, com café —
+          â€” atÃ© amanhÃ£, com cafÃ© â€”
         </p>
       </main>
 

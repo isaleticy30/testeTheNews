@@ -3,6 +3,7 @@ import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
 export const getRouter = () => {
+  // Cria um router isolado por execucao com o QueryClient usado nas rotas.
   const queryClient = new QueryClient();
 
   const router = createRouter({

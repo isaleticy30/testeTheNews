@@ -1,4 +1,5 @@
 export function renderErrorPage(): string {
+  // Gera uma pagina HTML minima para falhas graves de renderizacao no servidor.
   return `<!doctype html>
 <html lang="en">
   <head>

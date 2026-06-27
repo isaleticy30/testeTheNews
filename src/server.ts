@@ -10,6 +10,7 @@ type ServerEntry = {
 let serverEntryPromise: Promise<ServerEntry> | undefined;
 
 async function getServerEntry(): Promise<ServerEntry> {
+  // Reaproveita a entrada SSR carregada para evitar imports repetidos no servidor.
   if (!serverEntryPromise) {
     serverEntryPromise = import("@tanstack/react-start/server-entry").then(
       (m) => (m.default ?? m) as ServerEntry,
@@ -18,8 +19,8 @@ async function getServerEntry(): Promise<ServerEntry> {
   return serverEntryPromise;
 }
 
-// h3 swallows in-handler throws into a normal 500 Response with body
-// {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
+// Converte a resposta generica do h3 em uma pagina HTML de erro quando ele
+// transforma uma excecao SSR em um JSON 500 sem stack util.
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
   if (response.status < 500) return response;
   const contentType = response.headers.get("content-type") ?? "";
@@ -39,6 +40,7 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    // Encaminha a requisicao para o handler SSR e aplica a normalizacao de falhas graves.
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

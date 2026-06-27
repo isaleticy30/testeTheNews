@@ -1,5 +1,5 @@
-// Captures the original Error out-of-band so server.ts can recover the stack
-// when h3 has already swallowed the throw into a generic 500 Response.
+// Guarda o erro original fora do fluxo principal para que server.ts ainda
+// consiga recuperar a stack quando o h3 engole a excecao.
 
 let lastCapturedError: { error: unknown; at: number } | undefined;
 const TTL_MS = 5_000;
@@ -16,6 +16,7 @@ if (typeof globalThis.addEventListener === "function") {
 }
 
 export function consumeLastCapturedError(): unknown {
+  // Entrega o ultimo erro capturado apenas se ele ainda estiver dentro da janela util.
   if (!lastCapturedError) return undefined;
   if (Date.now() - lastCapturedError.at > TTL_MS) {
     lastCapturedError = undefined;

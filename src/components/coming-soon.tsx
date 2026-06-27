@@ -1,6 +1,7 @@
 import { BottomNav } from "@/components/bottom-nav";
 
 export function ComingSoon({ title }: { title: string }) {
+  // Reaproveita uma tela de placeholder para secoes ainda nao implementadas.
   return (
     <div className="relative mx-auto min-h-screen max-w-[430px] overflow-hidden bg-cream text-plum">
       <div className="pointer-events-none absolute -left-20 top-32 size-64 rounded-full bg-blush/60 blur-3xl" />

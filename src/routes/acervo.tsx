@@ -56,6 +56,7 @@ const editions = [
 ];
 
 function Acervo() {
+  // Exibe a tela de acervo com destaque para a edicao mais recente e historico.
   return (
     <div className="relative mx-auto min-h-screen max-w-[430px] overflow-hidden bg-cream text-plum">
       <div className="pointer-events-none absolute -right-24 top-24 size-72 rounded-full bg-terracotta/15 blur-3xl" />
@@ -111,7 +112,7 @@ function Acervo() {
           </div>
         </section>
 
-        {/* Featured */}
+        {/* Destaque principal do acervo */}
         <section className="mt-8 px-6">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-terracotta/15 px-3 py-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-terracotta">
             <span className="size-1.5 animate-pulse rounded-full bg-terracotta" />
@@ -155,7 +156,7 @@ function Acervo() {
           </article>
         </section>
 
-        {/* Section title */}
+        {/* Titulo da lista historica */}
         <div className="mt-10 flex items-end justify-between px-6">
           <h3 className="font-display text-2xl font-light">
             Edições <em className="italic text-terracotta">anteriores</em>
@@ -163,7 +164,7 @@ function Acervo() {
           <span className="font-sans text-[11px] text-dim">recente ↓</span>
         </div>
 
-        {/* Timeline list */}
+        {/* Lista de edicoes anteriores */}
         <ul className="mt-5 space-y-3 px-6">
           {editions.map((e, i) => (
             <li key={i}>

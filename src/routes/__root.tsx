@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
 
 function NotFoundComponent() {
+  // Exibe a tela padrao de 404 para rotas que nao existem no app.
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -35,6 +36,7 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+  // Mostra uma interface amigavel para erros inesperados e registra o incidente.
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -106,6 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  // Define a casca HTML compartilhada por todas as paginas.
   return (
     <html lang="en">
       <head>
@@ -120,11 +123,12 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
+  // Injeta o QueryClient no app e libera a renderizacao das rotas filhas.
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      {/* As rotas filhas sao renderizadas aqui. Sem o Outlet, a navegacao quebra. */}
       <Outlet />
     </QueryClientProvider>
   );

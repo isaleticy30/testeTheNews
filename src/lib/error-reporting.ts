@@ -19,6 +19,7 @@ declare global {
 }
 
 export function reportError(error: unknown, context: Record<string, unknown> = {}) {
+  // Envia erros do cliente para a camada de observabilidade, quando disponivel.
   if (typeof window === "undefined") return;
   window.__Events?.captureException?.(
     error,
