@@ -6,7 +6,7 @@ export const Route = createFileRoute("/copa")({
   // Renderiza a tela temporaria da secao "copa".
   component: () => (
     <>
-      <ComingSoon title="copa" />
+      <ComingSoon title="Copa" />
       <BottomNav />
     </>
   ),

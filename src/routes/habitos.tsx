@@ -6,7 +6,7 @@ export const Route = createFileRoute("/habitos")({
   // Renderiza a tela temporaria da secao "habitos".
   component: () => (
     <>
-      <ComingSoon title="hábitos" />
+      <ComingSoon title="Hábitos" />
       <BottomNav />
     </>
   ),

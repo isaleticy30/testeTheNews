@@ -70,7 +70,7 @@ function Acervo() {
         >
           <ArrowLeft className="size-4" strokeWidth={2.25} />
         </Link>
-        <p className="font-display text-base italic">acervo</p>
+        <p className="font-display text-base italic">Acervo</p>
         <button
           aria-label="Filtros"
           className="grid size-10 place-items-center rounded-full border border-plum/15 bg-cream/70 backdrop-blur"

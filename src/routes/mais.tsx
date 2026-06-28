@@ -6,7 +6,7 @@ export const Route = createFileRoute("/mais")({
   // Renderiza a tela temporaria da secao "mais".
   component: () => (
     <>
-      <ComingSoon title="mais" />
+      <ComingSoon title="Mais" />
       <BottomNav />
     </>
   ),
