@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Heart, Eye, Bookmark, ArrowUpRight, Sparkles, Search } from "lucide-react";
+import { Heart, Eye, Bookmark, ArrowUpRight, Search } from "lucide-react";
 import { BottomNav } from "@/components/bottom-nav";
 import contractImg from "@/assets/contract-signing.jpg";
+import newLogoWhite1 from "@/assets/newLogoWhite1.png";
 import pharmaImg from "@/assets/pharma-pens.jpg";
 import satImg from "@/assets/satellite-forest.jpg";
 import oilImg from "@/assets/oil-refinery.jpg";
@@ -65,14 +66,15 @@ function Index() {
       <div className="pointer-events-none absolute -right-20 top-[520px] size-64 rounded-full bg-sage/40 blur-3xl" />
 
       <header className="relative z-10 flex items-center justify-between px-6 pt-6">
-        <div className="flex items-center gap-2.5">
-          <span className="grid size-9 place-items-center rounded-2xl bg-plum text-cream">
-            <Sparkles className="size-4" strokeWidth={2.5} />
-          </span>
-          <div className="leading-tight">
-            <p className="font-display text-lg italic">the news</p>
-            <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 · qui</p>
-          </div>
+        <div className="flex items-center gap-3">
+          <img
+            src={newLogoWhite1}
+            alt="the news"
+            width={120}
+            height={32}
+            className="h-8 w-auto"
+          />
+          <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 · qui</p>
         </div>
         <button
           aria-label="Buscar"

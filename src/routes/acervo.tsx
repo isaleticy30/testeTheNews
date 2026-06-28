@@ -9,10 +9,10 @@ import starfishImg from "@/assets/rising-starfish.jpg";
 export const Route = createFileRoute("/acervo")({
   head: () => ({
     meta: [
-      { title: "Acervo — the news" },
-      { name: "description", content: "1.396 edições anteriores da newsletter the news." },
-      { property: "og:title", content: "Acervo — the news" },
-      { property: "og:description", content: "1.396 edições anteriores da newsletter the news." },
+      { title: "Acervo — The News" },
+      { name: "description", content: "1.396 edições anteriores da newsletter The News." },
+      { property: "og:title", content: "Acervo — The News" },
+      { property: "og:description", content: "1.396 edições anteriores da newsletter The News." },
     ],
   }),
   component: Acervo,
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/acervo")({
 
 const filters = [
   { label: "Todas", color: "bg-plum text-cream" },
-  { label: "the news", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
+  { label: "The News", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
   { label: "night", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
   { label: "copa", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
 ];
@@ -129,7 +129,7 @@ function Acervo() {
             <div className="absolute inset-0 bg-gradient-to-t from-plum via-plum/55 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6">
               <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-cream/70">
-                the news · hoje
+                The News · hoje
               </p>
               <h2 className="mt-2 text-balance font-display text-[28px] font-light leading-[1.05]">
                 os sócios das <em className="italic text-blush">americanas</em>
