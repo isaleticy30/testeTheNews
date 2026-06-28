@@ -2,11 +2,11 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Newspaper, Flame, Trophy, BookOpen, Menu } from "lucide-react";
 
 const items = [
-  { to: "/", label: "edição", Icon: Newspaper },
-  { to: "/acervo", label: "acervo", Icon: BookOpen },
-  { to: "/habitos", label: "hábitos", Icon: Flame },
-  { to: "/copa", label: "copa", Icon: Trophy },
-  { to: "/mais", label: "mais", Icon: Menu },
+  { to: "/", label: "Edição", Icon: Newspaper },
+  { to: "/acervo", label: "Acervo", Icon: BookOpen },
+  { to: "/habitos", label: "Hábitos", Icon: Flame },
+  { to: "/copa", label: "Copa", Icon: Trophy },
+  { to: "/mais", label: "Mais", Icon: Menu },
 ] as const;
 
 export function BottomNav() {
