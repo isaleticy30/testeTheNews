@@ -74,7 +74,10 @@ function Index() {
             height={32}
             className="h-8 w-auto"
           />
-          <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 · qui</p>
+          <div className="leading-tight">
+            <p className="font-display text-lg italic">The News</p>
+            <p className="font-sans text-[10px] tracking-wider text-dim">ed. 1.396 · qui</p>
+          </div>
         </div>
         <button
           aria-label="Buscar"
