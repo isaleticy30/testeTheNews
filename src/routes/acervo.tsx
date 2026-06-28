@@ -21,8 +21,8 @@ export const Route = createFileRoute("/acervo")({
 const filters = [
   { label: "Todas", color: "bg-plum text-cream" },
   { label: "The News", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
-  { label: "night", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
-  { label: "copa", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
+  { label: "Night", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
+  { label: "Copa", color: "bg-cream/60 text-plum ring-1 ring-plum/10" },
 ];
 
 const editions = [
@@ -96,7 +96,7 @@ function Acervo() {
               className="flex-1 bg-transparent font-sans text-sm placeholder:text-dim focus:outline-none"
             />
             <span className="rounded-full bg-plum px-2.5 py-1 text-[10px] font-semibold text-cream">
-              ⌘K
+              ➜
             </span>
           </label>
 
